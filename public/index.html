@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taka Income - Official Download Portal & Mobile App</title>
+  <meta name="description" content="Download Taka Income App. Earn real cash daily by spinning the wheel, watching video ads, and running cloud mining. Instant cashout to bKash and Nagad.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #059669;
+      --primary-dark: #047857;
+      --primary-light: #10b981;
+      --gold: #f59e0b;
+      --gold-dark: #d97706;
+      --gold-light: #fbbf24;
+      --dark: #0f172a;
+      --dark-card: #1e293b;
+      --slate-muted: #94a3b8;
+      --light-bg: #f8fafc;
+      --white: #ffffff;
+      --bkash: #e2136e;
+      --nagad: #f7941d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: #334155;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* HEADER / NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 14px 20px;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--white);
+    }
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+      font-weight: 800;
+      color: #000;
+    }
+    .brand-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.5px;
+    }
+    .brand-subtitle {
+      font-size: 11px;
+      color: var(--gold-light);
+      display: block;
+      font-weight: 600;
+    }
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .btn-nav-download {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: var(--white);
+      text-decoration: none;
+      padding: 9px 20px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+    }
+    .btn-nav-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.5);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: radial-gradient(circle at top right, #1e3a8a, #0f172a 75%);
+      color: var(--white);
+      padding: 70px 20px 85px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.25), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 850px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+    .badge-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .badge-pulse {
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 span.gold {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      font-size: 17px;
+      color: #cbd5e1;
+      margin-bottom: 30px;
+      max-width: 580px;
+      line-height: 1.6;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 850px) {
+      .hero-btns {
+        justify-content: center;
+      }
+      .hero-desc {
+        margin: 0 auto 30px;
+      }
+    }
+    .btn-download-main {
+      background: linear-gradient(135deg, #059669, #10b981);
+      color: var(--white);
+      text-decoration: none;
+      padding: 16px 28px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+      transition: all 0.25s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+    }
+    .btn-download-main:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(16, 185, 129, 0.6);
+      background: linear-gradient(135deg, #047857, #059669);
+    }
+    .btn-wa {
+      background: #25d366;
+      color: var(--white);
+      text-decoration: none;
+      padding: 16px 24px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.25s ease;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    }
+    .btn-wa:hover {
+      transform: translateY(-3px);
+      background: #20ba5a;
+    }
+    .hero-meta {
+      display: flex;
+      gap: 22px;
+      color: #94a3b8;
+      font-size: 13px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 850px) {
+      .hero-meta {
+        justify-content: center;
+      }
+    }
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* PHONE MOCKUP */
+    .mockup-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .phone-card {
+      width: 310px;
+      background: #1e293b;
+      border: 3px solid rgba(255, 255, 255, 0.15);
+      border-radius: 36px;
+      padding: 18px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+    .phone-notch {
+      width: 110px;
+      height: 18px;
+      background: #0f172a;
+      margin: 0 auto 16px;
+      border-radius: 0 0 12px 12px;
+    }
+    .phone-screen {
+      background: #0f172a;
+      border-radius: 24px;
+      padding: 16px;
+      color: var(--white);
+    }
+    .screen-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .screen-balance-box {
+      background: linear-gradient(135deg, #065f46, #047857);
+      padding: 16px;
+      border-radius: 18px;
+      text-align: center;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 16px rgba(4, 120, 87, 0.3);
+    }
+    .screen-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .screen-tile {
+      background: #1e293b;
+      padding: 12px;
+      border-radius: 14px;
+      text-align: center;
+      font-size: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .screen-tile-icon {
+      font-size: 20px;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    /* SECTION COMMON */
+    .section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+    .section-title h2 {
+      font-size: 34px;
+      color: #0f172a;
+      font-weight: 800;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+    .section-title p {
+      color: #64748b;
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* FEATURES GRID */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: var(--white);
+      padding: 28px;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+      border-color: #cbd5e1;
+    }
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+    .icon-green { background: #dcfce7; color: #15803d; }
+    .icon-gold { background: #fef3c7; color: #b45309; }
+    .icon-blue { background: #dbeafe; color: #1d4ed8; }
+    .icon-purple { background: #f3e8ff; color: #7e22ce; }
+    .icon-pink { background: #fce7f3; color: #be185d; }
+    .icon-cyan { background: #cffafe; color: #0e7490; }
+
+    .feature-card h3 {
+      font-size: 20px;
+      color: #0f172a;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .feature-card p {
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .feature-tag {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: #f1f5f9;
+      color: #475569;
+    }
+
+    /* HOW TO INSTALL GUIDE */
+    .guide-box {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      border-radius: 28px;
+      padding: 45px 35px;
+      color: var(--white);
+      margin-top: 20px;
+    }
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .guide-step {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 22px;
+      border-radius: 18px;
+      position: relative;
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      background: var(--gold);
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    .guide-step h4 {
+      font-size: 17px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .guide-step p {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    /* RATES & CASHOUT */
+    .rates-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    @media (max-width: 768px) {
+      .rates-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    .rates-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+    }
+    .rates-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+    .rates-table td {
+      padding: 13px 8px;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 14px;
+    }
+    .rates-table td.val {
+      text-align: right;
+      font-weight: 700;
+      color: #059669;
+    }
+
+    /* FAQ ACCORDION */
+    .faq-item {
+      background: var(--white);
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 18px 24px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #0f172a;
+      user-select: none;
+    }
+    .faq-answer {
+      padding: 0 24px 20px;
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.6;
+      display: none;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    .faq-item.active .faq-question {
+      color: #059669;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 60px 20px 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 14px;
+    }
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 768px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+    .footer-col h4 {
+      color: var(--white);
+      font-size: 16px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    .footer-links {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: var(--primary-light);
+    }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    @media (max-width: 768px) {
+      .footer-bottom {
+        justify-content: center;
+      }
+    }
+
+    /* FLOATING ACTION BUTTON FOR MOBILE */
+    .mobile-float-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 12px 18px;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .mobile-float-bar {
+        display: flex;
+      }
+      body {
+        padding-bottom: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">TK</div>
+        <div>
+          <span class="brand-title">Taka Income</span>
+          <span class="brand-subtitle">Official Mobile App</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <a href="https://wa.me/8801921679459?text=Hello%20Admin,%20I%20need%20support%20with%20Taka%20Income" target="_blank" class="btn-wa" style="padding: 8px 16px; font-size: 13px; border-radius: 20px;">
+          WhatsApp
+        </a>
+        <a href="/Taka_Income_v1.0.apk" download="Taka_Income_v1.0.apk" target="_blank" class="btn-nav-download btn-download-trigger">
+          Download APK
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-container">
+      <div>
+        <div class="badge-live">
+          <span class="badge-pulse"></span>
+          100% Verified Daily Payouts & Proofs
+        </div>
+        <h1>Earn Real Cash Daily <br>Right From Your <span class="gold">Smartphone</span></h1>
+        <p class="hero-desc">
+          Spin the lucky wheel, watch quick sponsored video ads, and activate hourly cloud mining to collect coins. Withdraw earnings directly to your personal <strong>bKash</strong> and <strong>Nagad</strong> accounts with zero hassle.
+        </p>
+
+        <div class="hero-btns">
+          <a href="/Taka_Income_v1.0.apk" download="Taka_Income_v1.0.apk" target="_blank" class="btn-download-main btn-download-trigger" id="heroDownloadBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+            </svg>
+            <div style="text-align: left;">
+              <div style="font-size: 18px; line-height: 1.2;">Direct APK Download</div>
+              <div style="font-size: 12px; font-weight: normal; opacity: 0.9;">Version 1.0 • 27 MB • Android 7.0+</div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/8801921679459?text=Hello%20Admin,%20I%20have%20questions%20about%20Taka%20Income%20App" target="_blank" class="btn-wa">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.6 4.12 3.65.58.25 1.02.4 1.38.52.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.29s-1.44-.71-1.66-.79c-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.38-.43.13-.14.17-.24.25-.4.08-.16.04-.3-.02-.42s-.54-1.3-.74-1.78c-.2-.48-.4-.41-.54-.42-.14-.01-.3-.01-.46-.01"/>
+            </svg>
+            WhatsApp Support
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span style="color: #10b981;">✔</span> 100 Coins Welcome Bonus
+          </div>
+          <div class="meta-item">
+            <span style="color: #10b981;">✔</span> 10% Lifetime Referral Share
+          </div>
+          <div class="meta-item">
+            <span style="color: #10b981;">✔</span> Instant bKash & Nagad Cashout
+          </div>
+        </div>
+      </div>
+
+      <!-- APP PREVIEW MOCKUP -->
+      <div class="mockup-wrapper">
+        <div class="phone-card">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="screen-header">
+              <span style="font-weight: 700; color: #34d399; font-size: 14px;">Taka Income</span>
+              <span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 700;">VIP GOLD</span>
+            </div>
+
+            <div class="screen-balance-box">
+              <div style="font-size: 11px; opacity: 0.9;">Total Balance</div>
+              <div style="font-size: 26px; font-weight: 800; color: #fbbf24;">1,250 <span style="font-size: 14px; color: #fff;">Coins</span></div>
+              <div style="font-size: 12px; color: #d1fae5; margin-top: 2px;">≈ 125.00 BDT (bKash / Nagad)</div>
+            </div>
+
+            <div class="screen-grid">
+              <div class="screen-tile">
+                <span class="screen-tile-icon">🎡</span>
+                <strong>Lucky Spin</strong>
+                <div style="color: #94a3b8; font-size: 10px;">10 Free Daily</div>
+              </div>
+              <div class="screen-tile">
+                <span class="screen-tile-icon">📺</span>
+                <strong>Video Ads</strong>
+                <div style="color: #94a3b8; font-size: 10px;">+2 Coins Each</div>
+              </div>
+              <div class="screen-tile">
+                <span class="screen-tile-icon">⛏️</span>
+                <strong>Cloud Mining</strong>
+                <div style="color: #94a3b8; font-size: 10px;">25 Coins / Hr</div>
+              </div>
+              <div class="screen-tile">
+                <span class="screen-tile-icon">💸</span>
+                <strong>Cashout</strong>
+                <div style="color: #94a3b8; font-size: 10px;">bKash & Nagad</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 14px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 12px; font-size: 11px; text-align: center; color: #34d399;">
+              Payment of 100 BDT Completed
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES SECTION -->
+  <section class="section">
+    <div class="section-title">
+      <h2>App Highlights & Income Methods</h2>
+      <p>Simple and transparent ways to turn your free time into real money</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- 1 -->
+      <div class="feature-card">
+        <div class="feature-icon icon-green">🎡</div>
+        <h3>Daily Lucky Wheel</h3>
+        <p>Get 10 free spins every single day. Spin the lucky wheel to win between 1 and 10 coins instantly on every attempt.</p>
+        <span class="feature-tag">10 Free Daily Spins</span>
+      </div>
+
+      <!-- 2 -->
+      <div class="feature-card">
+        <div class="feature-icon icon-gold">📺</div>
+        <h3>Watch Video Ads</h3>
+        <p>Watch short sponsored video advertisements. Once completed, 2 coins are credited directly to your balance with zero delay.</p>
+        <span class="feature-tag">Instant +2 Coins Credit</span>
+      </div>
+
+      <!-- 3 -->
+      <div class="feature-card">
+        <div class="feature-icon icon-blue">⚡</div>
+        <h3>Hourly Cloud Mining</h3>
+        <p>VIP members can start automated cloud mining once every hour. Once the 60-minute cycle finishes, collect 25 coins in one click.</p>
+        <span class="feature-tag">25 Coins Every Hour</span>
+      </div>
+
+      <!-- 4 -->
+      <div class="feature-card">
+        <div class="feature-icon icon-purple">👥</div>
+        <h3>10% Lifetime Referral Share</h3>
+        <p>Share your unique referral code with family and friends. Whenever they complete tasks, 10% of their earnings are automatically rewarded to you.</p>
+        <span class="feature-tag">Unlimited Invitations</span>
+      </div>
+
+      <!-- 5 -->
+      <div class="feature-card">
+        <div class="feature-icon icon-pink">👑</div>
+        <h3>VIP Gold Membership</h3>
+        <p>Unlock high-speed hourly cloud mining and accelerated earning rewards with a lifetime VIP activation fee of only 599 BDT.</p>
+        <span class="feature-tag">Lifetime VIP Gold</span>
+      </div>
+
+      <!-- 6 -->
+      <div class="feature-card">
+        <div class="feature-icon icon-cyan">💸</div>
+        <h3>bKash & Nagad Cashout</h3>
+        <p>As soon as you reach 1,000 coins, request a direct cash withdrawal of 100 BDT to your personal bKash or Nagad wallet.</p>
+        <span class="feature-tag">1,000 Coins = 100 BDT</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO INSTALL APK GUIDE -->
+  <section class="section" style="padding-top: 0;">
+    <div class="guide-box">
+      <div style="text-align: center;">
+        <span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 700;">Installation Guide</span>
+        <h3 style="font-size: 28px; margin-top: 10px;">How to Install the APK on Your Android Device</h3>
+        <p style="color: #94a3b8; font-size: 15px; margin-top: 6px;">Since this app is directly downloaded from our official website, follow these 4 quick steps:</p>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-step">
+          <div class="step-num">1</div>
+          <h4>Tap Download</h4>
+          <p>Click the green "Direct APK Download" button on this page to start downloading the APK file.</p>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">2</div>
+          <h4>Download Anyway</h4>
+          <p>If your browser shows a safety prompt saying <em>"File might be harmful"</em>, select <strong>"Download anyway"</strong>.</p>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">3</div>
+          <h4>Install Anyway</h4>
+          <p>Open the completed download and tap <strong>Install</strong>. If Google Play Protect prompts you, tap <strong>"Install anyway"</strong>.</p>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">4</div>
+          <h4>Claim 100 Bonus Coins</h4>
+          <p>Launch the app, register with your phone number and password, and collect your 100 free welcome coins!</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 35px;">
+        <a href="/Taka_Income_v1.0.apk" download="Taka_Income_v1.0.apk" target="_blank" class="btn-download-main btn-download-trigger">
+          Download APK Now (27 MB)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EARNING RATES & CASHOUT TABLE -->
+  <section class="section" style="padding-top: 0;">
+    <div class="section-title">
+      <h2>Earning Rates & Withdrawal Terms</h2>
+      <p>Transparent coin valuation and payout criteria</p>
+    </div>
+
+    <div class="rates-container">
+      <!-- Left -->
+      <div class="rates-card">
+        <h3 style="font-size: 20px; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span>📊</span> Coin Earning Chart
+        </h3>
+        <table class="rates-table">
+          <tr>
+            <td>New User Sign-Up Bonus</td>
+            <td class="val">+100 Coins (10 BDT)</td>
+          </tr>
+          <tr>
+            <td>Sponsored Video Ad</td>
+            <td class="val">+2 Coins each</td>
+          </tr>
+          <tr>
+            <td>Hourly Cloud Mining (VIP)</td>
+            <td class="val">+25 Coins / hour</td>
+          </tr>
+          <tr>
+            <td>Daily Free Spins (10x)</td>
+            <td class="val">+10 to 100 Coins</td>
+          </tr>
+          <tr>
+            <td>Referral Commission</td>
+            <td class="val">10% Lifetime Share</td>
+          </tr>
+          <tr>
+            <td><strong>Coin Conversion Rate</strong></td>
+            <td class="val" style="color: #d97706;">10 Coins = 1 BDT</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Right -->
+      <div class="rates-card">
+        <h3 style="font-size: 20px; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span>💸</span> Withdrawal & Cashout Info
+        </h3>
+        <table class="rates-table">
+          <tr>
+            <td>Supported Payment Methods</td>
+            <td class="val" style="color: #3b82f6;">bKash & Nagad (Personal)</td>
+          </tr>
+          <tr>
+            <td>Minimum Withdrawal Limit</td>
+            <td class="val">1,000 Coins (= 100 BDT)</td>
+          </tr>
+          <tr>
+            <td>Payment Processing Time</td>
+            <td class="val">Within 12 to 24 Hours</td>
+          </tr>
+          <tr>
+            <td>Withdrawal Fee</td>
+            <td class="val" style="color: #10b981;">100% Free (0 BDT)</td>
+          </tr>
+          <tr>
+            <td>Lifetime VIP Plan</td>
+            <td class="val" style="color: #e11d48;">599 BDT (One-Time)</td>
+          </tr>
+          <tr>
+            <td>Admin Support</td>
+            <td class="val">WhatsApp: +880 1921-679459</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section" style="padding-top: 0;">
+    <div class="section-title">
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p>Quick answers to common questions about payouts and tasks</p>
+    </div>
+
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-item active">
+        <div class="faq-question">
+          1. How do I cash out my earnings?
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          Once your balance reaches 1,000 coins (100 BDT), navigate to the Withdraw menu inside the app. Select either bKash or Nagad, enter your personal mobile wallet number, and submit your request.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          2. How do I activate VIP Gold Membership?
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          Open the VIP tab in the app and send 599 BDT to the admin's official bKash/Nagad number (01921679459). Submit your sender number and Transaction ID (TrxID) for immediate verification.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          3. How does hourly cloud mining work?
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          In the Cloud Mining tab, click 'Start Mining' to initiate a 1-hour automated countdown. When the timer finishes, tap 'Collect 25 Coins' to transfer them straight to your main wallet.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          4. Why is the app downloaded as an APK? Is it safe?
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes, the APK is 100% safe, clean, and malware-free. Direct APK distribution ensures you always get the latest version directly from our secure servers without store restrictions.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          5. Who should I contact for help?
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          You can reach our dedicated admin support anytime via WhatsApp at +880 1921-679459 for any payout or account inquiries.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="brand" style="margin-bottom: 12px;">
+          <div class="brand-icon">TK</div>
+          <span class="brand-title">Taka Income</span>
+        </div>
+        <p style="line-height: 1.6; max-width: 400px;">
+          The reliable and modern mobile earning platform. Complete daily activities on your Android smartphone and receive instant cash to bKash and Nagad.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="/Taka_Income_v1.0.apk" download="Taka_Income_v1.0.apk">Download APK</a></li>
+          <li><a href="https://wa.me/8801921679459" target="_blank">Admin WhatsApp Helpline</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Support</h4>
+        <p style="margin-bottom: 8px;">Direct WhatsApp Helpline:</p>
+        <p><strong style="color: #34d399;">+880 1921-679459</strong></p>
+        <p style="font-size: 12px; margin-top: 6px;">Available 9:00 AM – 11:00 PM</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Taka Income. All Rights Reserved.</div>
+      <div style="font-size: 13px;">Version 1.0 • Android APK & Web Portal</div>
+    </div>
+  </footer>
+
+  <!-- MOBILE FLOATING DOWNLOAD BAR -->
+  <div class="mobile-float-bar">
+    <div>
+      <div style="font-size: 14px; font-weight: 700; color: #fff;">Taka Income v1.0</div>
+      <div style="font-size: 11px; color: #34d399;">Free Download • 27 MB</div>
+    </div>
+    <a href="/Taka_Income_v1.0.apk" download="Taka_Income_v1.0.apk" target="_blank" class="btn-nav-download btn-download-trigger" style="padding: 10px 20px; font-size: 14px;">
+      Download APK
+    </a>
+  </div>
+
+  <!-- IN-PAGE DOWNLOAD TOAST NOTIFICATION -->
+  <div id="downloadToast" style="display: none; position: fixed; top: 20px; right: 20px; z-index: 9999; background: #064e3b; color: #ecfdf5; border: 2px solid #10b981; padding: 16px 22px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); max-width: 380px; animation: slideIn 0.3s ease;">
+    <div style="display: flex; align-items: flex-start; gap: 12px;">
+      <span style="font-size: 28px; line-height: 1;">📥</span>
+      <div>
+        <h4 style="font-size: 16px; font-weight: 700; color: #34d399; margin-bottom: 4px;">APK Download Started!</h4>
+        <p style="font-size: 13px; color: #a7f3d0; margin-bottom: 6px;">Taka_Income_v1.0.apk (27 MB) is downloading to your device.</p>
+        <p style="font-size: 11px; color: #cbd5e1;">Once downloaded, tap the notification and press 'Install'.</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+
+    // Safe In-Page Download Trigger Function
+    function triggerApkDownload(e) {
+      const toast = document.getElementById('downloadToast');
+      if (toast) {
+        toast.style.display = 'block';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 7000);
+      }
+
+      try {
+        const link = document.createElement('a');
+        link.href = '/Taka_Income_v1.0.apk';
+        link.setAttribute('download', 'Taka_Income_v1.0.apk');
+        link.setAttribute('target', '_blank');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } catch (err) {
+        window.open('/Taka_Income_v1.0.apk', '_blank');
+      }
+    }
+
+    // Attach to all download buttons
+    document.querySelectorAll('.btn-download-trigger').forEach(btn => {
+      btn.addEventListener('click', triggerApkDownload);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Taka Income",
+  "description": "দৈনিক স্পিন, ভিডিও অ্যাড, মাইনিং ও রেফারেল থেকে টাকা আয় করার বিশ্বস্ত প্ল্যাটফর্ম।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
